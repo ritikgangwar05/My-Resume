@@ -1,0 +1,142 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ritik Kumar - Profile</title>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 24px;
+}
+
+.profile {
+    padding: 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+section {
+    background: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #eee;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+    section {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll("section");
+
+    sections.forEach(section => {
+        section.addEventListener("mouseenter", () => {
+            section.style.transform = "scale(1.02)";
+            section.style.transition = "0.3s ease-in-out";
+        });
+        
+        section.addEventListener("mouseleave", () => {
+            section.style.transform = "scale(1)";
+        });
+    });
+
+    window.addEventListener("scroll", function () {
+        let header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 50);
+    });
+});
+
+</script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Profile</h1>
+    </header>
+    <section class="profile">
+        <img src="ritik.jpeg" alt="Your Photo" class="profile-pic">
+        <h2>Ritik Kumar</h2>
+        <p><strong>Date of Birth:</strong> 01 May 2003</p>
+    </section>
+    <section class="info">
+        <h3>Personal Information</h3>
+        <p><strong>Father's Name:</strong> Mr. Rajesh Kumar Gangwar</p>
+        <p><strong>Mother's Name:</strong> Mrs. Vimlesh Kumari</p>
+    </section>
+    <section class="contact">
+        <h3>Contact Information</h3>
+        <p><strong>Address:</strong> Nawabganj, Bareilly</p>
+        <p><strong>Pin Code:</strong> 262406</p>
+        <p><strong>Phone:</strong> 7078622710</p>
+        <p><strong>Email:</strong> ritikgangwar0987@gmail.com</p>
+    </section>
+    <section class="education">
+        <h3>Academic Details</h3>
+        <p><strong>Course:</strong> MCA</p>
+        <p><strong>Admission No.:</strong> 24SCSE2030002</p>
+        <p><strong>Batch:</strong> 2024-2026</p>
+        <p><strong>Section:</strong> 6th</p>
+        <p><strong>College:</strong> Galgotias University</p>
+    </section>
+    <section class="skills">
+        <h3>Skills</h3>
+        <ul>
+            <li>Python</li>
+            <li>Django</li>
+            <li>Linux</li>
+            <li>IoT</li>
+            <li>MySQL</li>
+            <li>AWS EC2</li>
+            <li>AI</li>
+            <li>Operating Systems (MacOS, Linux, Windows)</li>
+            <li>NetBeans IDE</li>
+            <li>ThingWorx Platform</li>
+        </ul>
+    </section>
+    <section class="projects">
+        <h3>Projects</h3>
+        <ul>
+            <li>Spam Detection using ML/AI</li>
+            <li>Brain Irregularity Detection</li>
+            <li>Several Websites</li>
+            <li>Online Quiz System Projects</li>
+            <li>IoT Projects</li>
+        </ul>
+    </section>
+</body>
+</html>
